@@ -1,0 +1,2719 @@
+{
+	"info": {
+		"_postman_id": "decea971-e1c9-4ae6-bbc5-c479573ce51a",
+		"name": "Users-CRUD-Hex",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "POST",
+			"item": [
+				{
+					"name": "/users 1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "9040426a-2fee-4a6c-a944-c5c17d00c15d",
+								"exec": [
+									"pm.test(\"Status code is 201\", function () {",
+									"    pm.response.to.have.status(201);",
+									"});",
+									"",
+									"pm.test(\"Content-Type is present\", function () {",
+									"    pm.response.to.have.header(\"Content-Type\");",
+									"});",
+									"",
+									"pm.test(\"Response data format is correct\", () => {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.id).to.be.a('string');",
+									"    pm.expect(jsonData.email).to.be.a('string');",
+									"    pm.expect(jsonData.fullName).to.be.a('string');",
+									"    pm.expect(jsonData.age).to.be.eql(30);",
+									"});",
+									"",
+									"let response = pm.response.json();",
+									"pm.globals.set(\"id_1\", response.id);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"firstName\": \"João\",\n\t\"lastName\": \"Silva\",\n\t\"birthDate\": \"1990-01-01\",\n\t\"email\": \"joao@teste.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/users 2",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "1d010135-04e2-451f-a123-ac3491249ace",
+								"exec": [
+									"pm.test(\"Status code is 201\", function () {",
+									"    pm.response.to.have.status(201);",
+									"});",
+									"",
+									"pm.test(\"Content-Type is present\", function () {",
+									"    pm.response.to.have.header(\"Content-Type\");",
+									"});",
+									"",
+									"pm.test(\"Response data format is correct\", () => {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.id).to.be.a('string');",
+									"    pm.expect(jsonData.email).to.be.a('string');",
+									"    pm.expect(jsonData.fullName).to.be.a('string');",
+									"    pm.expect(jsonData.age).to.be.eql(40);",
+									"});",
+									"",
+									"let response = pm.response.json();",
+									"pm.globals.set(\"id_2\", response.id);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"firstName\": \"Maria\",\n\t\"lastName\": \"Alves\",\n\t\"birthDate\": \"1980-01-01\",\n\t\"email\": \"maria@teste.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/users 3",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "5d124471-bb51-45fc-b0e3-96f13c01e0a0",
+								"exec": [
+									"pm.test(\"Status code is 201\", function () {",
+									"    pm.response.to.have.status(201);",
+									"});",
+									"",
+									"pm.test(\"Content-Type is present\", function () {",
+									"    pm.response.to.have.header(\"Content-Type\");",
+									"});",
+									"",
+									"pm.test(\"Response data format is correct\", () => {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.id).to.be.a('string');",
+									"    pm.expect(jsonData.email).to.be.a('string');",
+									"    pm.expect(jsonData.fullName).to.be.a('string');",
+									"    pm.expect(jsonData.age).to.be.eql(50);",
+									"});",
+									"",
+									"let response = pm.response.json();",
+									"pm.globals.set(\"id_3\", response.id);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"firstName\": \"Caio\",\n\t\"lastName\": \"Junior\",\n\t\"birthDate\": \"1970-01-01\",\n\t\"email\": \"caio@teste.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/users 4",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "f6dd95ec-4d06-4524-9e70-cce51c974340",
+								"exec": [
+									"pm.test(\"Status code is 201\", function () {",
+									"    pm.response.to.have.status(201);",
+									"});",
+									"",
+									"pm.test(\"Content-Type is present\", function () {",
+									"    pm.response.to.have.header(\"Content-Type\");",
+									"});",
+									"",
+									"pm.test(\"Response data format is correct\", () => {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.id).to.be.a('string');",
+									"    pm.expect(jsonData.email).to.be.a('string');",
+									"    pm.expect(jsonData.fullName).to.be.a('string');",
+									"    pm.expect(jsonData.age).to.be.eql(60);",
+									"});",
+									"",
+									"let response = pm.response.json();",
+									"pm.globals.set(\"id_4\", response.id);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"firstName\": \"Luan\",\n\t\"lastName\": \"Junior\",\n\t\"birthDate\": \"1960-01-01\",\n\t\"email\": \"luan@teste.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/users 5 (sem primeiro nome)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "d25ef4ed-6834-484f-94de-4281995833c4",
+								"exec": [
+									"pm.test(\"Status code is 201\", function () {",
+									"    pm.response.to.have.status(201);",
+									"});",
+									"",
+									"pm.test(\"Content-Type is present\", function () {",
+									"    pm.response.to.have.header(\"Content-Type\");",
+									"});",
+									"",
+									"pm.test(\"Response data format is correct\", () => {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.id).to.be.a('string');",
+									"    pm.expect(jsonData.email).to.be.a('string');",
+									"    pm.expect(jsonData.fullName).to.be.a('string');",
+									"    pm.expect(jsonData.age).to.be.eql(60);",
+									"});",
+									"",
+									"let response = pm.response.json();",
+									"pm.globals.set(\"id_5\", response.id);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"lastName\": \"Junior\",\n\t\"birthDate\": \"1960-01-01\",\n\t\"email\": \"luan-5@teste.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/users 6 (sem segundo nome)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "682a10b5-6a18-40af-b164-835c82c94b89",
+								"exec": [
+									"pm.test(\"Status code is 201\", function () {",
+									"    pm.response.to.have.status(201);",
+									"});",
+									"",
+									"pm.test(\"Content-Type is present\", function () {",
+									"    pm.response.to.have.header(\"Content-Type\");",
+									"});",
+									"",
+									"pm.test(\"Response data format is correct\", () => {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.id).to.be.a('string');",
+									"    pm.expect(jsonData.email).to.be.a('string');",
+									"    pm.expect(jsonData.fullName).to.be.a('string');",
+									"    pm.expect(jsonData.age).to.be.eql(60);",
+									"});",
+									"",
+									"let response = pm.response.json();",
+									"pm.globals.set(\"id_6\", response.id);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"firstName\": \"Luan\",\n\t\"birthDate\": \"1960-01-01\",\n\t\"email\": \"luan-6@teste.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/users 7 (sem nomes)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "0c44def4-506b-4594-b4b1-30b4145db5ce",
+								"exec": [
+									"pm.test(\"Status code is 201\", function () {",
+									"    pm.response.to.have.status(201);",
+									"});",
+									"",
+									"pm.test(\"Content-Type is present\", function () {",
+									"    pm.response.to.have.header(\"Content-Type\");",
+									"});",
+									"",
+									"pm.test(\"Response data format is correct\", () => {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.id).to.be.a('string');",
+									"    pm.expect(jsonData.email).to.be.a('string');",
+									"    pm.expect(jsonData.age).to.be.eql(60);",
+									"    pm.expect(jsonData).to.not.have.property(\"fullName\");",
+									"});",
+									"",
+									"let response = pm.response.json();",
+									"pm.globals.set(\"id_7\", response.id);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"birthDate\": \"1960-01-01\",\n\t\"email\": \"luan-7@teste.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/users 8 (sem data de nascimento)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "a55b22bf-e657-4c0a-8da5-c33b8fc624c3",
+								"exec": [
+									"pm.test(\"Status code is 201\", function () {",
+									"    pm.response.to.have.status(201);",
+									"});",
+									"",
+									"pm.test(\"Content-Type is present\", function () {",
+									"    pm.response.to.have.header(\"Content-Type\");",
+									"});",
+									"",
+									"pm.test(\"Response data format is correct\", () => {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.id).to.be.a('string');",
+									"    pm.expect(jsonData.email).to.be.a('string');",
+									"    pm.expect(jsonData.fullName).to.be.a('string');",
+									"    pm.expect(jsonData).to.not.have.property(\"age\");",
+									"});",
+									"",
+									"let response = pm.response.json();",
+									"pm.globals.set(\"id_8\", response.id);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"firstName\": \"Luan\",\n\t\"lastName\": \"Junior\",\n\t\"email\": \"luan-8@teste.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/users 9 (sem nomes e data de nascimento)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "52cf9507-45b2-4106-9a8c-c5069957df0d",
+								"exec": [
+									"pm.test(\"Status code is 201\", function () {",
+									"    pm.response.to.have.status(201);",
+									"});",
+									"",
+									"pm.test(\"Content-Type is present\", function () {",
+									"    pm.response.to.have.header(\"Content-Type\");",
+									"});",
+									"",
+									"pm.test(\"Response data format is correct\", () => {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.id).to.be.a('string');",
+									"    pm.expect(jsonData.email).to.be.a('string');",
+									"});",
+									"",
+									"let response = pm.response.json();",
+									"pm.globals.set(\"id_9\", response.id);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\": \"luan-9@teste.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/users - sem dados",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "2ab86884-b6c9-4b89-a994-45b6f62913fb",
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {",
+									"    pm.response.to.have.status(400);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/users - e-mail duplicado",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "6740462b-d326-40c6-8187-77f04d15d890",
+								"exec": [
+									"pm.test(\"Status code is 422\", function () {",
+									"    pm.response.to.have.status(422);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"firstName\": \"Luan\",\n\t\"lastName\": \"Junior\",\n\t\"birthDate\": \"1960-01-01\",\n\t\"email\": \"luan@teste.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/users - e-mail inválido",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "656d3351-f705-459c-ac63-2e86ebe37d9b",
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {",
+									"    pm.response.to.have.status(400);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"firstName\": \"Luan\",\n\t\"lastName\": \"Junior\",\n\t\"birthDate\": \"1960-01-01\",\n\t\"email\": \"email.invalido.teste.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/users - data de nascimento inválida",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "92af67f1-99ea-4806-a27f-cb78f0cfbcdb",
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {",
+									"    pm.response.to.have.status(400);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"firstName\": \"João\",\n\t\"lastName\": \"Silva\",\n\t\"birthDate\": \"1990/01/01\",\n\t\"email\": \"joao@teste.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/users - json inválido",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "c8f9c67f-042a-46d3-bcd0-859b20c2d0c6",
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {",
+									"    pm.response.to.have.status(400);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"firstName\": \"João\",\n\t\"lastName\": \"Silva\",\n\t\"birthDate\": \"1990-01-01\",\n\t\"email\": \"joao@teste.com\"\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/users - tipo da mensagem inválido",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "d1095f11-d6d9-4b36-9514-7b3322e6b40b",
+								"exec": [
+									"pm.test(\"Status code is 415\", function () {",
+									"    pm.response.to.have.status(415);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"firstName\": \"João\",\n\t\"lastName\": \"Silva\",\n\t\"birthDate\": \"1990-01-01\",\n\t\"email\": \"joao@teste.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "xml"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/users/1 -  método não permitido",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "33f43404-aca1-465a-b0b0-f55936cf25e7",
+								"exec": [
+									"pm.test(\"Status code is 405\", function () {",
+									"    pm.response.to.have.status(405);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"firstName\": \"João\",\n\t\"lastName\": \"Silva\",\n\t\"birthDate\": \"1990-01-01\",\n\t\"email\": \"joao@teste.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/users/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "GET",
+			"item": [
+				{
+					"name": "/users",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "708b90a9-2185-4019-967c-1d47096e8c26",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Content-Type is present\", function () {",
+									"    pm.response.to.have.header(\"Content-Type\");",
+									"});",
+									"",
+									"pm.test(\"Response data format is correct\", function () {",
+									"    var jsonData = pm.response.json();",
+									"",
+									"    const expectedIds = [pm.globals.get(\"id_1\"), pm.globals.get(\"id_2\"), pm.globals.get(\"id_3\"), pm.globals.get(\"id_4\"), pm.globals.get(\"id_5\"), pm.globals.get(\"id_6\"), pm.globals.get(\"id_7\"), pm.globals.get(\"id_8\"), pm.globals.get(\"id_9\")]",
+									"",
+									"    pm.expect(jsonData",
+									"        .map(actualData => actualData.id)",
+									"        .every(id => expectedIds.includes(id))",
+									"    ).to.eql(true)",
+									"",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/users (firstName + lastName)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "0189b1ae-fdba-434a-b111-40c550199ddf",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Content-Type is present\", function () {",
+									"    pm.response.to.have.header(\"Content-Type\");",
+									"});",
+									"",
+									"pm.test(\"Response data format is correct\", () => {",
+									"    var jsonData = pm.response.json();",
+									"    var id_4 = pm.globals.get(\"id_4\");",
+									"    pm.expect(jsonData[0].id).to.be.a('string');",
+									"    pm.expect(jsonData[0].id).to.eql(id_4);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/users?firstName=Luan&lastName=Junior",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users"
+							],
+							"query": [
+								{
+									"key": "firstName",
+									"value": "Luan"
+								},
+								{
+									"key": "lastName",
+									"value": "Junior"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/users (firstName)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "a2866e2d-f2c4-40e2-b3c6-0dab19bca6e7",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Content-Type is present\", function () {",
+									"    pm.response.to.have.header(\"Content-Type\");",
+									"});",
+									"",
+									"pm.test(\"Response data format is correct\", function () {",
+									"    var jsonData = pm.response.json();",
+									"",
+									"    const expectedIds = [pm.globals.get(\"id_4\"), pm.globals.get(\"id_6\"), pm.globals.get(\"id_8\")]",
+									"",
+									"    pm.expect(jsonData",
+									"        .map(actualData => actualData.id)",
+									"        .every(id => expectedIds.includes(id))",
+									"    ).to.eql(true)",
+									"",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/users?firstName=Luan",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users"
+							],
+							"query": [
+								{
+									"key": "firstName",
+									"value": "Luan"
+								},
+								{
+									"key": "lastName",
+									"value": "Junior",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/users (lastName)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "d8a8f996-1888-42f9-9407-9a49edb6763b",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Content-Type is present\", function () {",
+									"    pm.response.to.have.header(\"Content-Type\");",
+									"});",
+									"",
+									"pm.test(\"Response data format is correct\", function () {",
+									"    var jsonData = pm.response.json();",
+									"",
+									"    const expectedIds = [pm.globals.get(\"id_3\"), pm.globals.get(\"id_4\"), pm.globals.get(\"id_5\"), pm.globals.get(\"id_8\")]",
+									"",
+									"    pm.expect(jsonData",
+									"        .map(actualData => actualData.id)",
+									"        .every(id => expectedIds.includes(id))",
+									"    ).to.eql(true)",
+									"",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/users?lastName=Junior",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users"
+							],
+							"query": [
+								{
+									"key": "firstName",
+									"value": "Luan",
+									"disabled": true
+								},
+								{
+									"key": "lastName",
+									"value": "Junior"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/users (firstName + lastName) - empty",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "51fd2001-a001-4209-a929-72c1c6958559",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Content-Type is present\", function () {",
+									"    pm.response.to.have.header(\"Content-Type\");",
+									"});",
+									"",
+									"pm.test(\"Response data format is correct\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData).to.be.eql([]);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/users?firstName=Luan Junior&lastName=",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users"
+							],
+							"query": [
+								{
+									"key": "firstName",
+									"value": "Luan Junior"
+								},
+								{
+									"key": "lastName",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/users/:id",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "8bb41277-c54a-4bcd-b907-6ad1ea471e04",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Content-Type is present\", function () {",
+									"    pm.response.to.have.header(\"Content-Type\");",
+									"});",
+									"",
+									"pm.test(\"Response data format is correct\", () => {",
+									"    var jsonData = pm.response.json();",
+									"    var id_1 = pm.globals.get(\"id_1\");",
+									"    pm.expect(jsonData.id).to.be.a('string');",
+									"    pm.expect(jsonData.id).to.eql(id_1);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/users/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "{{id_1}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/users/:id - usuário não encontrado",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "31c9caaf-65c7-489c-885e-3f139e388ec7",
+								"exec": [
+									"pm.test(\"Status code is 404\", function () {",
+									"    pm.response.to.have.status(404);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/users/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "9999"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "PUT",
+			"item": [
+				{
+					"name": "/users/:id",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "f0e84b98-c5e4-4f56-a05f-bcb2b25599ff",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Content-Type is present\", function () {",
+									"    pm.response.to.have.header(\"Content-Type\");",
+									"});",
+									"",
+									"pm.test(\"Response data format is correct\", () => {",
+									"    var jsonData = pm.response.json();",
+									"    var id_1 = pm.globals.get(\"id_1\");",
+									"    pm.expect(jsonData.id).to.be.a('string');",
+									"    pm.expect(jsonData.id).to.eql(id_1);",
+									"    pm.expect(jsonData).to.not.have.property(\"age\");",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"firstName\": \"João Nogueira\",\n\t\"lastName\": \"da Silva\",\n\t\"email\": \"joao@teste.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/users/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "{{id_1}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/users/:id - sem dados",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "e68b7d05-8edd-4fe2-950d-b96cf74f4621",
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {",
+									"    pm.response.to.have.status(400);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/users/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "{{id_1}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/users/:id - data de nascimento inválida",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "68091909-c393-4b9f-bd6c-a699423175ac",
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {",
+									"    pm.response.to.have.status(400);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"firstName\": \"João Nogueira\",\n\t\"lastName\": \"da Silva\",\n\t\"birthDate\": \"1990/01/01\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/users/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "{{id_1}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/users/:id - json inválido",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ef3f8dad-bb33-4ae3-a6b1-d55f42a7fd09",
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {",
+									"    pm.response.to.have.status(400);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"firstName\": \"João Nogueira\",\n\t\"lastName\": \"da Silva\"\n\t\"email\": \"joao@teste.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/users/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "{{id_1}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/users/:id - tipo da mensagem inválido",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ea940675-f77a-446e-97c8-a49078546856",
+								"exec": [
+									"pm.test(\"Status code is 415\", function () {",
+									"    pm.response.to.have.status(415);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"firstName\": \"João Nogueira\",\n\t\"lastName\": \"da Silva\",\n\t\"email\": \"joao@teste.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "xml"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/users/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "{{id_1}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/users/:id - método não permitido",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "e4069822-80fe-48c3-ba7a-9ef79351760a",
+								"exec": [
+									"pm.test(\"Status code is 405\", function () {",
+									"    pm.response.to.have.status(405);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"firstName\": \"João Nogueira\",\n\t\"lastName\": \"da Silva\",\n\t\"email\": \"joao@teste.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/users/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/users/:id (cria)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "a78fd379-7ecc-4642-81eb-abfdb1465f59",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Content-Type is present\", function () {",
+									"    pm.response.to.have.header(\"Content-Type\");",
+									"});",
+									"",
+									"pm.test(\"Response data format is correct\", () => {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.id).to.be.a('string');",
+									"    pm.expect(jsonData.email).to.be.a('string');",
+									"    pm.expect(jsonData.fullName).to.be.a('string');",
+									"    pm.expect(jsonData.age).to.be.eql(30);",
+									"    pm.expect(jsonData.id).to.eql(pm.globals.get(\"id_10\"));",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "8b1daa68-fec3-48c7-a522-ac4ce7036c42",
+								"exec": [
+									"var uuid = require('uuid');\r",
+									"var id_10 = uuid.v4();\r",
+									"\r",
+									"pm.globals.set(\"id_10\", id_10);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"firstName\": \"João Nogueira\",\n\t\"lastName\": \"da Silva\",\n\t\"birthDate\": \"1990-01-01\",\n\t\"email\": \"joao-10@teste.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/users/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "{{id_10}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "PATCH",
+			"item": [
+				{
+					"name": "/users/:id (e-mail)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "e30e2858-a36e-457e-8eb0-db54d723ef7b",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Content-Type is present\", function () {",
+									"    pm.response.to.have.header(\"Content-Type\");",
+									"});",
+									"",
+									"pm.test(\"Response data format is correct\", () => {",
+									"    var jsonData = pm.response.json();",
+									"    var id_1 = pm.globals.get(\"id_1\");",
+									"    pm.expect(jsonData.id).to.be.a('string');",
+									"    pm.expect(jsonData.id).to.eql(id_1);",
+									"    pm.expect(jsonData.email).to.eql(\"joao-atualizado@teste.com\");",
+									"    pm.expect(jsonData).to.have.property(\"fullName\");",
+									"    pm.expect(jsonData).to.not.have.property(\"age\");",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\": \"joao-atualizado@teste.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/users/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "{{id_1}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/users/:id (birthDate)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "fd3119aa-21a5-49a7-9ed8-f282714b2dfc",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Content-Type is present\", function () {",
+									"    pm.response.to.have.header(\"Content-Type\");",
+									"});",
+									"",
+									"pm.test(\"Response data format is correct\", () => {",
+									"    var jsonData = pm.response.json();",
+									"    var id_1 = pm.globals.get(\"id_1\");",
+									"    pm.expect(jsonData.id).to.be.a('string');",
+									"    pm.expect(jsonData.id).to.eql(id_1);",
+									"    pm.expect(jsonData.email).to.eql(\"joao-atualizado@teste.com\");",
+									"    pm.expect(jsonData).to.have.property(\"fullName\");",
+									"    pm.expect(jsonData).to.have.property(\"age\");",
+									"    pm.expect(jsonData.age).to.eql(20);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"birthDate\": \"2000-01-01\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/users/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "{{id_1}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/users/:id (firstName)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "e56dcf8c-1e4a-434e-8a50-961cdd271609",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Content-Type is present\", function () {",
+									"    pm.response.to.have.header(\"Content-Type\");",
+									"});",
+									"",
+									"pm.test(\"Response data format is correct\", () => {",
+									"    var jsonData = pm.response.json();",
+									"    var id_1 = pm.globals.get(\"id_1\");",
+									"    pm.expect(jsonData.id).to.be.a('string');",
+									"    pm.expect(jsonData.id).to.eql(id_1);",
+									"    pm.expect(jsonData.email).to.eql(\"joao-atualizado@teste.com\");",
+									"    pm.expect(jsonData).to.have.property(\"fullName\");",
+									"    pm.expect(jsonData).to.have.property(\"age\");",
+									"    pm.expect(jsonData.age).to.eql(20);",
+									"    pm.expect(jsonData.fullName).to.eql(\"João Ferreira da Silva\");",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"firstName\": \"João Ferreira\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/users/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "{{id_1}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/users/:id - e-mail duplicado",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "b38ad9e4-1da0-40f1-b513-514ef2fea81d",
+								"exec": [
+									"pm.test(\"Status code is 422\", function () {",
+									"    pm.response.to.have.status(422);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\": \"maria@teste.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/users/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "{{id_1}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/users/:id - data de nascimento inválida",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "058ba6b4-1024-43f0-bb6b-17853724d85b",
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {",
+									"    pm.response.to.have.status(400);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"birthDate\": \"01/01/1990\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/users/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "{{id_1}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/users/:id - usuário não encontrado",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "3d2c68ae-d444-46f7-bece-fcc984ced652",
+								"exec": [
+									"pm.test(\"Status code is 404\", function () {",
+									"    pm.response.to.have.status(404);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\": \"joao.silva@teste.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/users/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "999"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/users/:id - json inválido",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "11085154-298e-49de-8636-e8691c27ecd4",
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {",
+									"    pm.response.to.have.status(400);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\": \"joao.silva@teste.com\"\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/users/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "{{id_1}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/users/:id - tipo de mensagem inválido",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "8afe6709-3d1a-419b-be50-adae9b3a0e48",
+								"exec": [
+									"pm.test(\"Status code is 415\", function () {",
+									"    pm.response.to.have.status(415);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\": \"joao.silva@teste.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "xml"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/users/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "{{id_1}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/users - método não permitido",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "181e8cf4-32bd-4982-8aca-aff3613638ed",
+								"exec": [
+									"pm.test(\"Status code is 405\", function () {",
+									"    pm.response.to.have.status(405);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\": \"joao.silva@teste.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "DELETE",
+			"item": [
+				{
+					"name": "/users/:id 2",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "be6092aa-d300-4eaf-bcbc-1ce072390d55",
+								"exec": [
+									"pm.test(\"Status code is 204\", function () {",
+									"    pm.response.to.have.status(204);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/users/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "{{id_2}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/users/:id 2 (idempotente)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "f80c9cc0-5da9-411e-b3b0-6e8ff2881843",
+								"exec": [
+									"pm.test(\"Status code is 204\", function () {",
+									"    pm.response.to.have.status(204);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/users/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "{{id_2}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/users/:id 3",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "0734919b-bde0-4c55-8360-3ec0ad7b2eb2",
+								"exec": [
+									"pm.test(\"Status code is 204\", function () {",
+									"    pm.response.to.have.status(204);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/users/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "{{id_3}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/users/:id 4",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "cac041f4-63e2-430b-82dd-b7682ce9dabb",
+								"exec": [
+									"pm.test(\"Status code is 204\", function () {",
+									"    pm.response.to.have.status(204);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/users/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "{{id_4}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/users/:id 5",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "4ede5a92-8e79-4bcb-8182-bd9d6ac38660",
+								"exec": [
+									"pm.test(\"Status code is 204\", function () {",
+									"    pm.response.to.have.status(204);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/users/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "{{id_5}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/users/:id 6",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "0acc67b5-50d2-4127-ae68-d0180cbb04a7",
+								"exec": [
+									"pm.test(\"Status code is 204\", function () {",
+									"    pm.response.to.have.status(204);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/users/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "{{id_6}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/users/:id 7",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "514da315-2294-4b74-88cd-709a09a3c240",
+								"exec": [
+									"pm.test(\"Status code is 204\", function () {",
+									"    pm.response.to.have.status(204);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/users/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "{{id_7}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/users/:id 8",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "8f4af18f-a34a-4e0b-b5b8-2a7edfa3277c",
+								"exec": [
+									"pm.test(\"Status code is 204\", function () {",
+									"    pm.response.to.have.status(204);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/users/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "{{id_8}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/users/:id 9",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "2d222aff-5a6d-4bf0-bec2-23eab80db70d",
+								"exec": [
+									"pm.test(\"Status code is 204\", function () {",
+									"    pm.response.to.have.status(204);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/users/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "{{id_9}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/users/:id 10",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "1814ad89-e764-47ab-bbd3-c30f5a96984e",
+								"exec": [
+									"pm.test(\"Status code is 204\", function () {",
+									"    pm.response.to.have.status(204);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/users/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "{{id_10}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/users/:id 1 - maior ou igual a 30 anos",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "60e4411a-0193-4bdb-879f-bffeeb576dbd",
+								"exec": [
+									"pm.test(\"Status code is 422\", function () {",
+									"    pm.response.to.have.status(422);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/users/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "{{id_1}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/users - método não permitido",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "c546ef98-0d2c-4f19-ad1b-9575646599df",
+								"exec": [
+									"pm.test(\"Status code is 405\", function () {",
+									"    pm.response.to.have.status(405);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Finishing",
+			"item": [
+				{
+					"name": "/users/:id (birthDate)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "78250633-dab9-46ad-805d-e8a8e75bf292",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Content-Type is present\", function () {",
+									"    pm.response.to.have.header(\"Content-Type\");",
+									"});",
+									"",
+									"pm.test(\"Response data format is correct\", () => {",
+									"    var jsonData = pm.response.json();",
+									"    var id_1 = pm.globals.get(\"id_1\");",
+									"    pm.expect(jsonData.id).to.be.a('string');",
+									"    pm.expect(jsonData.id).to.eql(id_1);",
+									"    pm.expect(jsonData.email).to.eql(\"joao-atualizado@teste.com\");",
+									"    pm.expect(jsonData).to.have.property(\"fullName\");",
+									"    pm.expect(jsonData).to.have.property(\"age\");",
+									"    pm.expect(jsonData.age).to.eql(30);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"birthDate\": \"1990-01-01\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/users/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "{{id_1}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/users/:id 1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "3ca82b47-aa82-4a77-8311-6aeb891327db",
+								"exec": [
+									"pm.test(\"Status code is 204\", function () {",
+									"    pm.response.to.have.status(204);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/users/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "{{id_1}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/users - empty list",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "272fbf06-c6fd-4668-8318-d744afdae96e",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Content-Type is present\", function () {",
+									"    pm.response.to.have.header(\"Content-Type\");",
+									"});",
+									"",
+									"pm.test(\"Response data format is correct\", () => {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData).to.eql([]);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "257d9d8f-4524-4fef-b5f4-4178149da919",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "7dfa7b33-c9d5-4e23-8649-12c3bb34ec79",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}

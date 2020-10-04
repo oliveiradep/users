@@ -1,0 +1,21 @@
+{
+  "name": "users",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@hapi/joi-date": "^2.0.1",
+    "email-validator": "^2.0.4",
+    "express": "^4.17.1",
+    "joi": "^17.2.1",
+    "moment": "^2.29.0",
+    "mongoose": "^5.10.7",
+    "node-uuid": "^1.4.8"
+  }
+}
