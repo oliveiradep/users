@@ -27,3 +27,10 @@ Postman
 
 - email is mandatory and exclusive;
 - users under the age of 30 cannot be excluded.
+
+## Running the application
+
+```bash
+docker-compose -f stack.yml up -d
+node src/index.js
+```
